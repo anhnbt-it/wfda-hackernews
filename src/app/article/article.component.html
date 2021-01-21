@@ -1,0 +1,16 @@
+<h2>Today's article</h2>
+<hr>
+<div *ngFor="let article of articles">
+  <a href="{{article.url}}" target="_blank">{{article.title}}</a>
+</div>
+<form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+  <p>
+    <label for="title">Title</label>
+    <textarea cols="70" rows="5" id="title" formControlName="title" placeholder="Enter a title"></textarea>
+  </p>
+  <p>
+    <label for="url">URL</label>
+    <textarea cols="70" rows="5" id="url" formControlName="url" placeholder="Enter a URL"></textarea>
+  </p>
+  <button class="button" type="submit">Add</button>
+</form>
