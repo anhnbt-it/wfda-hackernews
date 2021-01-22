@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Create <a routerLink="/">Back</a>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="outline">
+                <mat-label for="id">Id</mat-label>
+                <input matInput type="number" formControlName="id" placeholder="Enter a Id">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label for="title">Title</mat-label>
+                <textarea matInput rows="5" id="title" formControlName="title" placeholder="Enter a Title"></textarea>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label for="url">URL</mat-label>
+                <textarea matInput rows="5" id="url" formControlName="url" placeholder="Enter a URL"></textarea>
+            </mat-form-field>
+            <p>
+                <button mat-raised-button color="primary" type="submit">Add</button>
+            </p>
+        </form>
+    </mat-card-content>
+</mat-card>

@@ -10,7 +10,6 @@ import { ArticleService } from '../service/article.service';
 })
 export class ArticleComponent implements OnInit {
 
-  articles = this.articleService.findAll();
   articleForm = this.formBuilder.group({
     title: '',
     url: ''
@@ -18,7 +17,6 @@ export class ArticleComponent implements OnInit {
 
 
   constructor(
-    private articleService: ArticleService,
     private formBuilder: FormBuilder
   ) {}
 
@@ -26,7 +24,7 @@ export class ArticleComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.articleService.save(this.articleForm.value);
+    // this.articleService.save(this.articleForm.value);
     console.warn('Your article has been submitted', this.articleForm.value);
     this.articleForm.reset();
   }

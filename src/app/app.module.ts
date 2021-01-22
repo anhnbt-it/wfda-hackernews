@@ -2,6 +2,8 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+import { AppRoutingModule } from './app-routing.module';
+
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
@@ -15,11 +17,23 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatLineModule} from '@angular/material/core';
+import { ArticleDetailsComponent } from './article-details/article-details.component';
+import { ArticleListComponent } from './article-list/article-list.component';
+import { ArticleCreateFormComponent } from './article-create-form/article-create-form.component';
+import { MessagesComponent } from './messages/messages.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { ToolbarPrimaryComponent } from './toolbar-primary/toolbar-primary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArticleComponent
+    ArticleComponent,
+    ArticleDetailsComponent,
+    ArticleListComponent,
+    ArticleCreateFormComponent,
+    MessagesComponent,
+    SidenavComponent,
+    ToolbarPrimaryComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +48,8 @@ import {MatLineModule} from '@angular/material/core';
     MatFormFieldModule,
     MatInputModule,
     MatListModule,
-    MatLineModule
+    MatLineModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

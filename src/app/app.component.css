@@ -1,14 +1,11 @@
 :host {
-  display: block;
+    display: block;
 }
 
 .example-sidenav-content {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+    height: 100%;
 }
 
 .example-sidenav {
-  padding: 20px;
+    padding: 20px;
 }

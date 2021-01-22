@@ -35,10 +35,4 @@ import {
 })
 export class AppComponent {
   title = 'hackernews';
-  showFiller = false;
-  isOpen = true;
-
-  toggle(): void {
-    this.isOpen = !this.isOpen;
-  }
 }
